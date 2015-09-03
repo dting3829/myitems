@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	    <style type="text/css">
+	    *{margin: 0;padding: 0;}
+	    li{list-style: none;}
+
+		body{
+			background: #666;
+			overflow: hidden;
+		}
+		li,ul{
+			height: 100%;
+			overflow: hidden;
+		}
+		/* 使得图片居中 webkit-box */
+		li{
+			position: absolute;
+			display: -webkit-box;
+			-webkit-box-pack: center;
+			-webkit-box-align: center;
+		}
+		li img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+		/* 隐藏画布外的内容 */
+		#canvas{
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+		}
+	    </style>
+</head>
+<body>
+	<div id="canvas">
+		<ul>
+			<li><img src="img/pic1.png"></li>
+			<li><img src="img/pic2.png"></li>
+			<li><img src="img/pic3.png"></li>
+			<li><img src="img/pic4.png"></li>
+			<li><img src="img/pic5.png"></li>
+			<li><img src="img/pic6.png"></li>
+		</ul>
+	</div>
+<script> 
+	var radio = window.innerHeight/window.innerWidth,
+			//设定一页的宽度
+		scaleW = window.innerWidth,
+			//设定初始的索引值
+	    idx = 0;
+</script>
+</body>
+</html>
