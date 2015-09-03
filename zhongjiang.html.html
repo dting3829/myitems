@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        *{margin: 0;padding: 0;}
+        #box{width: 270px;height:230px;border: 1px solid red;margin: 20px auto;}
+        #box ul li{list-style: none;float: left;width: 80px;height: 50px;text-align: center;line-height: 50px;border: 1px solid #ff40bd;font-size: 18px;margin: 4px;}
+        #box ul li.lll{list-style: none;float: left;width: 80px;height: 50px;text-align: center;line-height: 50px;border: 1px solid #ff40bd;font-size: 18px;margin: 4px;background-color: coral;color: red;}
+        #btn1{width: 60px;height: 30px;background-color: orange;color: white;margin-left: 60px;}
+        #btn2{width: 60px;height: 30px;background-color: orange;color: white;}
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li>一等奖</li>
+        <li>二等奖</li>
+        <li>三等奖</li>
+        <li>四等奖</li>
+        <li>五等奖</li>
+        <li>六等奖</li>
+        <li>七等奖</li>
+        <li>八等奖</li>
+        <li>九等奖</li>
+    </ul>
+    <input type="button" value="开始" id="btn1">
+    <input type="button" value="停止" id="btn2">
+</div>
+<script>
+    var lis=document.getElementsByTagName("li")
+    var btn1=document.getElementById("btn1")
+    var btn2=document.getElementById("btn2")
+    var k=0
+    function auto (){
+        for(var i=0;i<=lis.length-1;i++){
+            lis[i].className=""
+        }
+        k++;
+        if(k>=lis.length-1){
+            k=0
+        }
+        lis[k].className="lll"
+    }
+    btn1.onclick=function(){
+        aa=setInterval(auto,100)
+    }
+    btn2.onclick=function(){
+       clearInterval(aa)
+    }
+
+</script>
+
+</body>
+</html>
